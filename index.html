@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Encuesta sobre adicción a videojuegos (15 preguntas)</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { color: #333; text-align: center; }
+        form { display: flex; flex-direction: column; }
+        label { margin-bottom: 10px; }
+        input[type="radio"], input[type="checkbox"] { margin-right: 5px; }
+        button { background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer; }
+        button:hover { background-color: #45a049; }
+        
+        /* Elimina el logo */
+        .logo {
+            display: none;
+        }
+
+        /* Opcional: Elimina cualquier referencia al logo */
+        *[class*="logo"] {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <h1>Encuesta sobre adicción a videojuegos (15 preguntas)</h1>
+
+    <form id="surveyForm">
+        <!-- Pregunta 1 -->
+        <label for="age">¿Cuál es tu edad?</label>
+        <input type="number" id="age" name="age" min="13" max="100" required>
+
+        <!-- Pregunta 2 -->
+        <label for="gender">¿Cuál es tu género?</label>
+        <select id="gender" name="gender" required>
+            <option value="">Seleccione...</option>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <option value="otro">Otro</option>
+        </select>
+
+        <!-- Pregunta 3 -->
+        <label for="hoursPlayed">¿Cuántas horas has jugado a videojuegos en la última semana?</label>
+        <input type="number" id="hoursPlayed" name="hoursPlayed" min="0" max="168" required>
+
+        <!-- Pregunta 4 -->
+        <label for="prioritize">¿Priorizas los momentos de estudio, trabajo y familia antes que jugar a videojuegos?</label>
+        <input type="radio" id="prioritizeYes" name="prioritize" value="yes" required>
+        <label for="prioritizeYes">Sí</label>
+        <input type="radio" id="prioritizeNo" name="prioritize" value="no" required>
+        <label for="prioritizeNo">No</label>
+
+        <!-- Pregunta 5 -->
+        <label for="feelAnxious">¿Sientes ansiedad si no puedes jugar durante un día entero?</label>
+        <input type="radio" id="feelAnxiousYes" name="feelAnxious" value="yes" required>
+        <label for="feelAnxiousYes">Sí</label>
+        <input type="radio" id="feelAnxiousNo" name="feelAnxious" value="no" required>
+        <label for="feelAnxiousNo">No</label>
+
+        <!-- Pregunta 6 -->
+        <label for="impactOnLife">¿Crees que los videojuegos tienen un impacto negativo en tu vida diaria?</label>
+        <input type="radio" id="impactOnLifeYes" name="impactOnLife" value="yes" required>
+        <label for="impactOnLifeYes">Sí</label>
+        <input type="radio" id="impactOnLifeNo" name="impactOnLife" value="no" required>
+        <label for="impactOnLifeNo">No</label>
+
+        <!-- Pregunta 7 -->
+        <label for="socialInteractions">¿Los videojuegos te han ayudado a conocer personas nuevas o mantener relaciones sociales?</label>
+        <input type="radio" id="socialInteractionsYes" name="socialInteractions" value="yes" required>
+        <label for="socialInteractionsYes">Sí</label>
+        <input type="radio" id="socialInteractionsNo" name="socialInteractions" value="no" required>
+        <label for="socialInteractionsNo">No</label>
+
+        <!-- Pregunta 8 -->
+        <label for="timeManagement">¿Tienes problemas para gestionar tu tiempo debido al juego de videojuegos?</label>
+        <input type="radio" id="timeManagementYes" name="timeManagement" value="yes" required>
+        <label for="timeManagementYes">Sí</label>
+        <input type="radio" id="timeManagementNo" name="timeManagement" value="no" required>
+        <label for="timeManagementNo">No</label>
+
+        <!-- Pregunta 9 -->
+        <label for="spendingMoney">¿Has gastado más dinero de lo planeado en videojuegos o accesorios relacionados?</label>
+        <input type="radio" id="spendingMoneyYes" name="spendingMoney" value="yes" required>
+        <label for="spendingMoneyYes">Sí</label>
+        <input type="radio" id="spendingMoneyNo" name="spendingMoney" value="no" required>
+        <label for="spendingMoneyNo">No</label>
+
+        <!-- Pregunta 10 -->
+        <label for="withdrawalSymptoms">¿Experimentas síntomas de abstinencia cuando no puedes jugar durante un período prolongado?</label>
+        <input type="radio" id="withdrawalSymptomsYes" name="withdrawalSymptoms" value="yes" required>
+        <label for="withdrawalSymptomsYes">Sí</label>
+        <input type="radio" id="withdrawalSymptomsNo" name="withdrawalSymptoms" value="no" required>
+        <label for="withdrawalSymptomsNo">No</label>
+
+        <!-- Pregunta 11 -->
+        <label for="frequencyOfPlay">¿Cómo frecuentemente juegas a videojuegos?</label>
+        <input type="radio" id="frequencyOfPlayDaily" name="frequencyOfPlay" value="daily" required>
+        <label for="frequencyOfPlayDaily">Diariamente</label>
+        <input type="radio" id="frequencyOfPlaySeveralTimesAWeek" name="frequencyOfPlay" value="several_times_a_week" required>
+        <label for="frequencyOfPlaySeveralTimesAWeek">Varías veces a la semana</label>
+        <input type="radio" id="frequencyOfPlayWeekly" name="frequencyOfPlay" value="weekly" required>
+        <label for="frequencyOfPlayWeekly">Semanalmente</label>
+        <input type="radio" id="frequencyOfPlayMonthly" name="frequencyOfPlay" value="monthly" required>
+        <label for="frequencyOfPlayMonthly">Mensualmente</label>
+
+        <!-- Pregunta 12 -->
+        <label for="favoriteGenre">¿Cuál es tu género de videojuego favorito?</label>
+        <select id="favoriteGenre" name="favoriteGenre" required>
+            <option value="">Seleccione...</option>
+            <option value="acción">Acción</option>
+            <option value="aventuras">Aventuras</option>
+            <option value="rol">Rol</option>
+            <option value="deportes">Deportes</option>
+            <option value="simuladores">Simuladores</option>
+            <option value="otros">Otros</option>
+        </select>
+
+        <!-- Pregunta 13 -->
+        <label for="mostPlayedGame">¿Cuál es el videojuego que has jugado más veces en tu vida?</label>
+        <input type="text" id="mostPlayedGame" name="mostPlayedGame">
+
+        <!-- Pregunta 14 -->
+        <label for="playWithFriends">¿Juegas principalmente con amigos o solícitadamente?</label>
+        <input type="radio" id="playWithFriendsYes" name="playWithFriends" value="yes" required>
+        <label for="playWithFriendsYes">Con amigos</label>
+        <input type="radio" id="playWithFriendsNo" name="playWithFriends" value="no" required>
+        <label for="playWithFriendsNo">Solícitamente</label>
+
+        <!-- Pregunta 15 -->
+        <label for="onlineGaming">¿Te gusta jugar online con desconocidos?</label>
+        <input type="radio" id="onlineGamingYes" name="onlineGaming" value="yes" required>
+        <label for="onlineGamingYes">Sí</label>
+        <input type="radio" id="onlineGamingNo" name="onlineGaming" value="no" required>
+        <label for="onlineGamingNo">No</label>
+
+        <button type="submit">Enviar encuesta</button>
+    </form>
+</body>
+</html>
